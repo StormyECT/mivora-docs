@@ -1,2 +1,79 @@
-<DOCTYPE!html>
-  hiii
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Mivroa Hub Docs</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      display: flex;
+      height: 100vh;
+    }
+
+    /* Sidebar */
+    .sidebar {
+      width: 250px;
+      background: #111;
+      color: #fff;
+      padding: 20px;
+    }
+
+    .sidebar h2 {
+      margin-top: 0;
+      font-size: 20px;
+    }
+
+    .sidebar a {
+      display: block;
+      color: #ccc;
+      text-decoration: none;
+      margin: 10px 0;
+      cursor: pointer;
+    }
+
+    .sidebar a:hover {
+      color: #fff;
+    }
+
+    /* Content */
+    .content {
+      flex: 1;
+      padding: 40px;
+      background: #f5f5f5;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="sidebar">
+    <h2>Mivroa Hub Docs</h2>
+    <a onclick="showHome()">Home</a>
+    <a onclick="showAPI()">API</a>
+  </div>
+
+  <div class="content" id="content">
+    <h1>Welcome</h1>
+    <p>This is your documentation homepage.</p>
+  </div>
+
+  <script>
+    function showHome() {
+      document.getElementById("content").innerHTML = `
+        <h1>Welcome</h1>
+        <p>This is your documentation homepage.</p>
+      `;
+    }
+
+    function showAPI() {
+      document.getElementById("content").innerHTML = `
+        <h1>Mivora API</h1>
+        <p>This is the Mivora API page.</p>
+      `;
+    }
+  </script>
+
+</body>
+</html>
